@@ -9,13 +9,13 @@ import com.example.sampletemplate.screen.main.MainScreen
 
 
 @Composable
-fun RootNavGraph()
+fun RootNavGraph(isLoggedIn:String)
 {
 
     val rootNavController= rememberNavController()
     NavHost(navController = rootNavController,
         route = Graph.ROOTGraph,
-        startDestination =Graph.AUTHENTICATIONGraph )
+        startDestination =if(isLoggedIn=="main")  Graph.MAINSCREENGraph else Graph.AUTHENTICATIONGraph )
     {
 
         authNavGraph(rootNavController= rootNavController)

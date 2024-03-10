@@ -102,7 +102,7 @@ fun LoginScreen(viewModel: LogInViewModel,navController: NavController) {
         LaunchedEffect(key1 = uiState) { // Recompose on login state change
             if (uiState) {
                 navController.navigate(Graph.MAINSCREENGraph) {
-                    popUpTo(AuthRouteScreen.Login.route) { inclusive = true }
+                    popUpTo(AuthRouteScreen.ONBOARDING1.route) { inclusive = true }
                 }
             }
         }
