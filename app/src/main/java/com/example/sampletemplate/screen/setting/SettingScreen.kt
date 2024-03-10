@@ -50,3 +50,4 @@ fun SettingDetailScreen(rootnavController: NavController) {
         }
     }
 }
+
