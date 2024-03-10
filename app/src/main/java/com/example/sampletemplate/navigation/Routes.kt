@@ -29,7 +29,7 @@ sealed class MainRouteScreen(val route: String) {
 }
 
 sealed class SettingRouteScreen(val route: String) {
-    object SettingDetail:SettingRouteScreen(route ="setting")
+    object MainSetting:SettingRouteScreen(route ="setting")
     object AboutUs : SettingRouteScreen(route = "aboutus")
 
     object Contact : SettingRouteScreen(route = "contact")

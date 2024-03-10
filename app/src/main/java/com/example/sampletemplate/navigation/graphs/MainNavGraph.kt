@@ -6,10 +6,12 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.sampletemplate.navigation.Graph
 import com.example.sampletemplate.navigation.MainRouteScreen
+import com.example.sampletemplate.screen.AuthScreen.LogInViewModel
 import com.example.sampletemplate.screen.main.HomeScreen
 import com.example.sampletemplate.screen.main.NotificationScreen
 import com.example.sampletemplate.screen.main.ProfileScreen
-import com.example.sampletemplate.screen.main.SettingScreen
+
+import com.example.sampletemplate.screen.setting.UserDetailScreen
 
 
 @Composable
@@ -42,7 +44,9 @@ fun MainNavGraph(
         }
         composable(route=MainRouteScreen.Setting.route)
         {
-            SettingScreen(navController = rootNavController )
+            //SettingScreen(navController = rootNavController )
+            val viewModel=  it.sharedViewModel<LogInViewModel>(rootNavController)
+            UserDetailScreen(viewmodel =viewModel , rootnavController =rootNavController )
         }
 
 

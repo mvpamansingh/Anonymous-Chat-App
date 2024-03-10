@@ -17,26 +17,28 @@ import androidx.navigation.NavController
 import com.example.sampletemplate.navigation.SettingRouteScreen
 
 
-@Composable
-fun SettingScreen(navController: NavController) {
-    Column(
-        modifier = Modifier
-
-            .fillMaxSize()
-            .background(Color.Cyan),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        Text(
-            text = "Setting Screen",
-            fontSize = 40.sp,
-            color = Color.Black
-
-        )
-
-        Button(onClick = { navController.navigate(SettingRouteScreen.SettingDetail.route)}) {
-            Text(text = "Go to Setting Detail Page")
-        }
-
-    }
-}
+//@Composable
+//fun SettingScreen(navController: NavController) {
+//    Column(
+//        modifier = Modifier
+//
+//            .fillMaxSize()
+//            .background(Color.Cyan),
+//        verticalArrangement = Arrangement.Center,
+//        horizontalAlignment = Alignment.CenterHorizontally
+//    ) {
+//        Text(
+//            text = "Setting Screen",
+//            fontSize = 40.sp,
+//            color = Color.Black
+//
+//        )
+//
+//        Button(onClick = {
+//           // navController.navigate(SettingRouteScreen.SettingDetail.route)
+//        }) {
+//            Text(text = "Go to Setting Detail Page")
+//        }
+//
+//    }
+//}
