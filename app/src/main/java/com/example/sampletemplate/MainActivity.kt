@@ -36,7 +36,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val navigate by splashviewModel.navigateasstateflow.collectAsState()
-                        RootNavGraph(navigate)
+                    RootNavGraph(navigate)
                 }
             }
         }
