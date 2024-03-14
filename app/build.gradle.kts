@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("io.realm.kotlin")
 }
 
 android {
@@ -71,8 +72,9 @@ dependencies {
 
     implementation("androidx.navigation:navigation-compose:$nav_version")
 
-
-
+    implementation("io.socket:socket.io-client:2.0.0"){
+        exclude(group = "org.json", module = "json")
+    }
 
     implementation("androidx.compose.ui:ui:1.6.1")
     implementation("androidx.compose.material:material:1.6.1")

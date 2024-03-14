@@ -4,6 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.example.chatapptrial.ChatViewModel
+import com.example.sampletemplate.OpenWorldChat.ChatScreen
 import com.example.sampletemplate.navigation.Graph
 import com.example.sampletemplate.navigation.MainRouteScreen
 import com.example.sampletemplate.screen.AuthScreen.LogInViewModel
@@ -31,8 +33,9 @@ fun MainNavGraph(
 
         composable(route=MainRouteScreen.Home.route)
         {
-            
-            HomeScreen()
+            val viewModelC=  it.sharedViewModel<ChatViewModel>(rootNavController)
+
+            ChatScreen(viewModel = viewModelC)
         }
         composable(route=MainRouteScreen.Notification.route)
         {
